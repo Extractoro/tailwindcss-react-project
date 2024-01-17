@@ -4,7 +4,7 @@ import { MdLanguage } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import { FaXmark } from "react-icons/fa6";
 
-const Navbar = () => {
+const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -96,4 +96,4 @@ const Navbar = () => {
   );
 };
 
-export default Navbar;
+export default NavBar;
