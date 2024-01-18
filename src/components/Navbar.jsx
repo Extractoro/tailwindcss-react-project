@@ -3,6 +3,7 @@ import logo from "../assets/logo.png";
 import { MdLanguage } from "react-icons/md";
 import { IoMenu } from "react-icons/io5";
 import { FaXmark } from "react-icons/fa6";
+import { Link } from "react-scroll";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -20,8 +21,8 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="bg-white md:px-14 p-4 max-w-screen-2xl border-b mx-auto text-primary fixed top-0 right-0 left-0">
-        <div className="text-xl container mx-auto flex justify-between items-center font-medium">
+      <nav className="bg-white md:px-14 p-4 border-b mx-auto text-primary fixed top-0 right-0 left-0">
+        <div className="text-xl container mx-auto max-w-screen-2xl flex justify-between items-center font-medium">
           <div className="flex space-x-14 items-center">
             <a
               href="/"
@@ -37,13 +38,17 @@ const NavBar = () => {
 
             <ul className="md:flex space-x-12 hidden">
               {navItems.map(({ link, path }) => (
-                <a
+                <Link
+                  spy={true}
+                  activeClass="active"
+                  smooth={true}
+                  offset={-80}
                   key={link}
-                  href={path}
+                  to={path}
                   className="block hover:text-gray-300 text-primary font-semibold "
                 >
                   {link}
-                </a>
+                </Link>
               ))}
             </ul>
           </div>
@@ -83,13 +88,18 @@ const NavBar = () => {
         }`}
       >
         {navItems.map(({ link, path }) => (
-          <a
+          <Link
+            spy={true}
+            activeClass="active"
+            smooth={true}
+            offset={-80}
             key={link}
-            href={path}
-            className="block hover:text-gray-300 text-primary font-semibold text-lg"
+            to={path}
+            onClick={toggleMenu}
+            className="block hover:text-gray-300 text-white font-semibold text-lg"
           >
             {link}
-          </a>
+          </Link>
         ))}
       </div>
     </>
