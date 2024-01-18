@@ -1,4 +1,6 @@
 import { useState } from "react";
+import green from "../assets/green.png";
+import red from "../assets/red.png";
 
 const Pricing = () => {
   const [isYearly, setIsYearly] = useState(false);
@@ -10,8 +12,8 @@ const Pricing = () => {
         "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       monthlyPrice: "50$",
       yearlyPrice: "499$",
-      green: "/src/assets/green.png",
-      red: "/src/assets/red.png",
+      green,
+      red,
     },
     {
       name: "Advance",
@@ -19,8 +21,8 @@ const Pricing = () => {
         "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       monthlyPrice: "85$",
       yearlyPrice: "699$",
-      green: "/src/assets/green.png",
-      red: "/src/assets/red.png",
+      green,
+      red,
     },
     {
       name: "Premium",
@@ -28,7 +30,7 @@ const Pricing = () => {
         "A common form of Lorem ipsum reads: Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
       monthlyPrice: "99$",
       yearlyPrice: "899$",
-      green: "/src/assets/green.png",
+      green,
     },
   ];
 
